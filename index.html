@@ -7,6 +7,9 @@
     <title>kim yun seo <3 </title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap');
+    </style>
 
 </head>
 
@@ -15,9 +18,9 @@
         <h1 class="row-category">yunseo profile</h1>
         <nav>
             <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/projects.html">About Projects</a></li>
-                <li><a href="/postings.html">Posting</a></li>
+                <li><a class="content" href="/index.html">Home</a></li>
+                <li><a class="content" href="/projects.html">About Projects</a></li>
+                <li><a class="content" href="/postings.html">Posting</a></li>
             </ul>
         </nav>
     </header>
@@ -27,21 +30,26 @@
     <div class="image-container">
         <img src="https://www.studiopeople.kr/common/img/default_profile.png" alt="Profile Image"/>
         <h1>김윤서</h1>
-        <p>Cloud Service & Full-Stack Developer</p>
+        <a>안녕하세요. 개발자</a>
+        <br/>
+        <br/>
     </div>
 
     <div class="row-category">
         <div>
-            <p class="title">Email</p>
-            <p>dbstj7457@naver.com</p>
+            <img src="./email_icon.png" alt="email icon" width="30px" height="30px"/>
+            <a class="title">Email</a>
+            <p class="content">dbstj7457@naver.com</p>
         </div>
         <div>
-            <p class="title">GitHub</p>
-            <a href="https://github.com/yuunseo">GitHub (@yuunseo)</a>
+            <img src="./git_icon.png" alt="email icon" width="30px" height="30px"/>
+            <a class="title">GitHub</a>
+            <p class="content" href="https://github.com/yuunseo">GitHub (@yuunseo)</p>
         </div>
         <div>
-            <p class="title">LinkedIn</p>
-            <a href="">In (@yuunseo)</a>   
+            <img src="./linkedin_icon.png" alt="email icon" width="30px" height="30px"/>
+            <a class="title">LinkedIn</a>
+            <p class="content" href=""> In (@yuunseo)</p>   
         </div>
     </div>
     
@@ -50,19 +58,20 @@
     <!-- 2. 프로젝트 컨테이너 -->
     <h2 class="row-category">About Projects</h2>
     <br/>
-    <div class="row-category">
+    <div class="col-category">
         <div>
-            <p class="title">HCI&U 연구실</p>
-            <p>2022.07~2023.07</p>
+            <p class="title" style="color:#3a54aa ;">한이음 ICT</p>
+            <p class="content"> [2023 ICT 한이음 멘토링]
+                애니런(AnyLearn) - AI기반 영어 회화 어플 개발 프로젝트</p>
+            <p class="content">2023.04 ~ 2023.11</p>
         </div>
+        <br/>
         <div>
-            <p class="title">한이음 ICT</p>
-            <p>2023.04 ~ 2023.11</p>
+            <p class="title" style="color:#0732be" >우리 FIS Academy</p>
+            <p class="content"> [우리 FIS Academy 5기] 클라우드 서비스 개발 과정 </p>
+            <p class="content">2025.07~2025.12</p>
         </div>
-        <div>
-            <p class="title">우리 FIS Academy</p>
-            <p>2025.07~2025.12</p>
-        </div>
+        <br/>
     </div>
     
     <hr/>
