@@ -54,3 +54,30 @@ div{ /* 컨테이너 간격 조정 */
     flex-direction: column;
     margin: 50px;
 }
+
+/* 애니메이션 추가해 보기 */
+.project_title {
+  color: #3a54aa;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.project_title::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #3a54aa;
+  transition: width 0.3s ease;
+}
+
+.project_title:hover {
+  color: #0732be;
+}
+
+.project_title:hover::after {
+  width: 100%;
+}

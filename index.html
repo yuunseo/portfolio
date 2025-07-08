@@ -10,6 +10,8 @@
     <style>
     @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap');
     </style>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <script type="module" src="./app.js"></script>
 
 </head>
 
@@ -27,9 +29,9 @@
     <hr/>
 
     <!-- 1. 프로필 컨테이너 -->
-    <div class="image-container">
+    <div class="image-container" data-aos="zoom-in">
         <img src="https://www.studiopeople.kr/common/img/default_profile.png" alt="Profile Image"/>
-        <h1>김윤서</h1>
+        <h1 >김윤서</h1>
         <a>안녕하세요. 개발자</a>
         <br/>
         <br/>
@@ -58,20 +60,22 @@
     <!-- 2. 프로젝트 컨테이너 -->
     <h2 class="row-category">About Projects</h2>
     <br/>
+    
     <div class="col-category">
-        <div>
-            <p class="title" style="color:#3a54aa ;">한이음 ICT</p>
+        <div data-aos="fade-up" data-aos-delay="0">
+            <a href="projects.html" class="title project_title" style="color:#3a54aa ;">한이음 ICT</a>
             <p class="content"> [2023 ICT 한이음 멘토링]
                 애니런(AnyLearn) - AI기반 영어 회화 어플 개발 프로젝트</p>
             <p class="content">2023.04 ~ 2023.11</p>
         </div>
         <br/>
-        <div>
-            <p class="title" style="color:#0732be" >우리 FIS Academy</p>
+        <div data-aos="fade-up" data-aos-delay="300">
+            <a href="projects.html" class="title project_title" style="color:#0732be" >우리 FIS Academy</a>
             <p class="content"> [우리 FIS Academy 5기] 클라우드 서비스 개발 과정 </p>
             <p class="content">2025.07~2025.12</p>
         </div>
         <br/>
+
     </div>
     
     <hr/>
@@ -80,6 +84,9 @@
     <footer>
         <p> &copy; kimyunseo</p>
     </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
 
 </body>
 
