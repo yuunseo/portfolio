@@ -17,7 +17,6 @@ emailBtn.addEventListener('click', () => {
 });
 
 githubBtn.addEventListener('click', () => {
-  // 깃허브 연락처 보이게
   contactInfo.style.display = 'block';
   contactInfo.innerHTML = `
     <p>

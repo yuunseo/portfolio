@@ -1,11 +1,10 @@
-/* 전체적으로 추가 */
+/*전체적으로 글씨체 통일*/
 .ibm-plex-sans-kr-regular {
   font-family: "IBM Plex Sans KR", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
-
-body { /*전체적으로 글씨체 통일*/
+body { 
     font-family: 'IBM Plex Sans KR', sans-serif;
 }
 
@@ -15,55 +14,53 @@ html {
 
 /* 헤더 및 네비게이션 바 */
 .header {
-    position: fixed;         /* 화면에 고정 */  
-    width: 100%; 
-    min-height: 60px;
-    box-sizing: border-box;  /* 화면 벗어나지 않게 */
+    position: fixed;            /* 화면에 고정 */  
+    width: 100%;                /* 부모 컨테이너 크기의 100% 맞춰서 */
+    box-sizing: border-box;     /* 화면 벗어나지 않게 */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.9rem 5rem;
-    background-color: white;
-    border-radius: 50px;
+    justify-content: space-between; /* 로고와 네비게이션 좌우로 정렬 */
+    align-items: center;            /* 세로축 방향 중앙 정렬 */
+    padding: 0.9rem 5rem;           /* 상하 좌우 패딩 */
+    background-color: white;      /* 배경 색상 */
+    border-radius: 50px;            /* 모서리 둥글게 */
 }
 
 .logo {
-  text-decoration: none; /* 밑줄 제거 */
-  color: inherit; /* 기본 글자 색상 그대로 유지 */
-  font-size: 1.2rem;
-  font-weight: bold;
+  text-decoration: none;        /* 밑줄 제거 */
+  color: inherit;               /* 클릭 시에도 글자 색상 유지 */
+  font-size: 1.2rem;            /* 폰트 사이즈 */
+  font-weight: bold;            /* 폰트 볼드 */
 }
 
-.header nav ul {
-    list-style-type: none; 
-    display: flex;
-    gap: 3rem;
-    margin: 0;
-    padding: 0;
+.header nav ul {            
+    list-style-type: none;      /* list 형식 제거 */
+    display: flex;              /* flex box 변환 */
+    gap: 3rem;                  /* 각 요소들간의 간격 */
+    margin: 0;                  /* 마진 조절해서 네비게이션 바 높이 조절*/    
 }
 
 .header nav a {
-    text-decoration: none;
-    font-size: 1.2rem;
-    color: rgb(79, 79, 79);
+    text-decoration: none;      /* 밑줄 제거 */
+    font-size: 1.2rem;          /* 폰트 사이즈 */
+    color: rgb(79, 79, 79);   /* 폰트 색상 */
 }
 
 
 /* 메인 */
 .main-banner {
-  background-color: #001f3f;  /* 진한 남색 */
-  color: white;               /* 글자 흰색 */
-  height: 100vh;              /* 화면 전체 높이 */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 2rem;
-  border-radius: 20px;
+  background-color: #001f3f;  /* 배경 색상 */
+  color: white;               /* 폰트 색상 */
+  height: 100vh;                /* 화면 전체 높이 */
+  display: flex;                /* flex box 변환 */
+  align-items: center;          /* 내부 요소들 세로 중앙 정렬 */
+  justify-content: center;      /* 내부 요소들 가로 중앙 정렬 */
+  text-align: center;           /* 텍스트 중앙 정렬 */
+  padding: 2rem;                /* 패딩 조절 */
+  border-radius: 20px;          /* 모서리 둥글게 */
 }
 
-.main-text h2 {
+.main-text h2 {                 /* 메인 배너 폰트 조절 */
   font-size: 4rem;
   margin-bottom: 1rem;
 }
@@ -73,14 +70,14 @@ html {
   margin-bottom: 2rem;
 }
 
-.main-text button {
+.main-text button {             /* 메인 배너 내 버튼 디자인 */
   padding: 0.8rem 1.5rem;
   background-color: white;
   color: #001f3f;
   border: none;
   border-radius: 8px;
   font-size: 1.5rem;
-  cursor: pointer;
+  cursor: pointer;              /* 커서 올려놓으면 포인터로 전환 */
 }
 
 /* contact 섹션 */
