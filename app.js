@@ -1,9 +1,10 @@
+// 버튼, 연락처 부분의 DOM 요소 불러오기
 const emailBtn = document.getElementById('email-btn');
 const githubBtn = document.getElementById('github-btn');
 const contactInfo = document.getElementById('contact-info');
 
+// 클릭 이벤트 발생 시, 
 emailBtn.addEventListener('click', () => {
-  // 이메일 연락처 보이게
   contactInfo.style.display = 'block';
   contactInfo.innerHTML = `
      <p>
