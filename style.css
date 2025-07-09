@@ -170,7 +170,7 @@ footer {
 .line {
   position: absolute;
   top: 0;
-  left: 50%;
+  left: 20%;
   width: 4px;
   height: 100%;
   background: #ddd;
@@ -197,8 +197,7 @@ footer {
 /* 타임라인 항목 기본 상태 (숨겨진 상태) */
 .timeline-item {
   position: relative;
-  margin-left: 65%;  /* 선 기준으로 오른쪽에 위치하게 */
-  width: 100%;
+  margin-left: 23.2%;  /* 선 위에 위치하게 */
   margin-bottom: 4rem;
   opacity: 0;
   transform: translateY(30px);
@@ -221,6 +220,25 @@ footer {
 /* 설명 텍스트 스타일 */
 .timeline-item p {
   font-size: 1.6rem;
+}
+
+.timeline-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* 글자 사이 간격 조절 */
+}
+
+.timeline-row h3 {
+  margin: 0; /* 기본 여백 제거 */
+  font-size: 2rem;
+}
+
+.certification {
+    background-color: #001f3f;
+    color: white;
+    padding: 0.8rem 1rem;
+    border-radius: 40px;
+    font-size: 1.2rem;
 }
 
 
@@ -254,6 +272,7 @@ footer {
   display: none;
   width: 300px;
   margin-top: 1rem;
+  margin-bottom: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -268,4 +287,3 @@ footer {
   from { opacity: 0; transform: scale(0.98); }
   to { opacity: 1; transform: scale(1); }
 }
-
