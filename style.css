@@ -1,5 +1,4 @@
-
-
+/* 전체적으로 추가 */
 .ibm-plex-sans-kr-regular {
   font-family: "IBM Plex Sans KR", sans-serif;
   font-weight: 400;
@@ -10,39 +9,44 @@ body { /*전체적으로 글씨체 통일*/
     font-family: 'IBM Plex Sans KR', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* 헤더 및 네비게이션 바 */
 .header {
     position: fixed;         /* 화면에 고정 */  
     width: 100%; 
+    min-height: 60px;
+    box-sizing: border-box;  /* 화면 벗어나지 않게 */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    flex-wrap: wrap;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 2rem;
+    padding: 0.9rem 5rem;
     background-color: white;
-    min-height: 60px;
-    border-radius: 30px;
+    border-radius: 50px;
 }
 
 .logo {
   text-decoration: none;
   color: inherit; /* 기본 글자 색상 그대로 유지 */
-  font-size: large;
+  font-size: 1.7rem;
   font-weight: bold;
 }
 
 .header nav ul {
     list-style-type: none; 
     display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+    gap: 3rem;
     margin: 0;
     padding: 0;
 }
 
 .header nav a {
     text-decoration: none;
+    font-size: 1.5rem;
+    color: rgb(79, 79, 79);
 }
 
 
@@ -60,12 +64,12 @@ body { /*전체적으로 글씨체 통일*/
 }
 
 .main-text h2 {
-  font-size: 2.5rem;
+  font-size: 5rem;
   margin-bottom: 1rem;
 }
 
 .main-text p {
-  font-size: 1.2rem;
+  font-size: 2rem;
   margin-bottom: 2rem;
 }
 
@@ -75,51 +79,60 @@ body { /*전체적으로 글씨체 통일*/
   color: #001f3f;
   border: none;
   border-radius: 8px;
-  font-size: 1rem;
+  font-size: 1.5rem;
   cursor: pointer;
 }
 
 /* contact 섹션 */
+#contact-info a {
+    font-size: 1.3rem;
+    color: inherit;      /* 부모 글자색 유지 */
+    text-decoration: none; /* 밑줄 없애기 */
+  }
 
-.row-category{ /*수평 카테고리*/
+#contact-info a:hover {
+text-decoration: underline; /* 필요하면 호버 시 밑줄 */
+}
+
+/* project 섹션 */
+.project-line{
     display: flex;
-    justify-content: space-around;
+    flex-direction: column; /* 세로 방향 정렬 */
+    gap: 3rem; /* 아이템 간 간격 */
 }
 
-.col-category{ /*수직 카테고리*/
-    margin-left: 100px;    
-    margin-right: 100px;   
+.project-line > a{
+    text-align: center;
+    font-size: 2.3rem;
+    font-weight: bold;
 }
 
-div{ /* 컨테이너 간격 조정 */
-    margin-bottom: 50px;
-    align-items: left;
+button {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+  font-size: 1rem;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.3s ease;
 }
 
-.title{ /*큰 제목 글씨 크기 및 두께*/
-    font-size: 30px;
-    font-weight: 700;
+button:hover {
+  background-color: rgba(128, 128, 128, 0.5);
 }
 
-.content{
-    color: gray;
-    font-size: 20px;
-}
-
-.image-container { /*프로필 이미지 레이아웃*/
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    margin: 50px;
-}
-
-/* 애니메이션 추가해 보기 */
 .project_title {
   color: #3a54aa;
   text-decoration: none;
   position: relative;
   transition: color 0.3s ease;
+  font-size: 30px;
+  font-weight: 700;
 }
 
 .project_title::after {
@@ -139,4 +152,98 @@ div{ /* 컨테이너 간격 조정 */
 
 .project_title:hover::after {
   width: 100%;
+}
+
+.col-category > div > p {
+  color: gray;
+  font-size: 20px;
+}
+
+/* 프로젝트 영역 */
+.project-line {
+  position: relative;
+  padding: 3rem 1rem;
+}
+
+/* 전체 컨테이너 */
+.projects-container {
+  display: flex;
+  justify-content: center;
+  gap: 5rem; /* 카드 사이 간격 */
+  padding: 1rem;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 각 카드 */
+.project-card {
+  background-color: #ffffff; /* 카드 배경색 (카드마다 다르게) */
+  border-radius: 15px;
+  width: 500px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: #fff;
+  cursor: pointer;
+}
+
+.project-card.purple {
+  background-color: #ffffff;
+  color: #fff;
+}
+
+.project-card:hover {
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+  background-color: #f8f8f8;
+}
+
+/* 상단 이미지 영역 */
+.project-card .image-area {
+  flex: 1;
+  position: relative;
+  padding: 2rem;
+}
+
+/* 이미지에 맞게 크기 조절 */
+.project-card .image-area img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* 카드 하단 텍스트 영역 */
+.project-card .text-area {
+  background: linear-gradient(180deg, rgba(0,12,25,0) 0%, rgba(0,12,25,0.8) 100%);
+  padding: 1rem 1.5rem 2rem 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 0 0 15px 15px;
+}
+
+/* 카테고리, 출처 */
+.project-card .source {
+  font-size: 1.5rem;
+  opacity: 0.7;
+  margin-bottom: 0.4rem;
+}
+
+/* 제목 */
+.project-card .title {
+  font-weight: 700;
+  font-size: 1.7rem;
+  margin-bottom: 0.6rem;
+  line-height: 1.3;
+}
+
+/* 날짜 */
+.project-card .date {
+  font-size: 1.5rem;
+  opacity: 0.6;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
 }
