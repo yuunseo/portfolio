@@ -57,3 +57,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+
+/* 마우스 갖다 대면 이미지 떠오르는 */
+document.querySelectorAll('.timeline-item').forEach(item => {
+  const text = item.querySelector('.project');
+  const img = item.querySelector('.hover-image');
+
+  if (text && img) {
+    text.addEventListener('mouseenter', () => {
+      img.classList.add('show');
+    });
+    text.addEventListener('mouseleave', () => {
+      img.classList.remove('show');
+    });
+  }
+});
